@@ -1,4 +1,4 @@
-import TransactionsList from '../transactions/components/transactions-list';
+import TransactionsList from '../business/transactions/components/transactions-list';
 
 const Transactions = () => (
   <div>

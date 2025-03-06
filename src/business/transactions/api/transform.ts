@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 import { CurrenciesRates, RawTransaction, Transaction } from '../types';
-import { DATE_FORMAT } from '../../config/consts';
+import { DATE_FORMAT } from '../../../config/consts';
 
 export const convertCurrencies = (
   amount: string,

@@ -1,4 +1,4 @@
-import CurrencyDisplay from '../../../../technical/common/components/currency-display';
+import CurrencyDisplay from '../../../../../technical/common/components/currency-display';
 import { Transaction } from '../../../types';
 
 interface TransactionsDetailsProps {

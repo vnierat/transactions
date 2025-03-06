@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { compareAsc, compareDesc, parse } from 'date-fns';
 import { Transaction } from '../types';
-import { DATE_FORMAT } from '../../config/consts';
+import { DATE_FORMAT } from '../../../config/consts';
 import isCurrenciesRates from './is-currencies-rates';
 
 const useSortedTransactions = (

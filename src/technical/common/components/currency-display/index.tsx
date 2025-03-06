@@ -1,4 +1,4 @@
-import { Amounts } from '../../../../transactions/types';
+import { Amounts } from '../../../../business/transactions/types';
 
 interface CurrencyDisplayProps {
   amounts: Amounts;

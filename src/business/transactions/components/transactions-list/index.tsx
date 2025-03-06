@@ -3,7 +3,7 @@ import { LoaderCircle } from 'lucide-react';
 import useColumnsDef from '../../utils/transactions-columns-def';
 import { Transaction } from '../../types';
 import { useGetTransactions } from '../../query';
-import DataTable from '../../../technical/common/components/table';
+import DataTable from '../../../../technical/common/components/table';
 import TransactionsDetails from './transactions-details';
 import useSortedTransactions from '../../utils/use-sorted-transaction';
 

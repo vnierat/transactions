@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { TransactionsTableValue } from '../../../../../transactions/types';
-import isCurrenciesRates from '../../../../../transactions/utils/is-currencies-rates';
+import { TransactionsTableValue } from '../../../../../business/transactions/types';
+import isCurrenciesRates from '../../../../../business/transactions/utils/is-currencies-rates';
 import CurrencyDisplay from '../../currency-display';
 
 interface TableCellProps {

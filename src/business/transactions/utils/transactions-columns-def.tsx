@@ -1,7 +1,7 @@
 import { Paperclip } from 'lucide-react';
 import { useMemo } from 'react';
 import { Transaction, TransactionsTableValue } from '../types';
-import TableCell from '../../technical/common/components/table/table-cell';
+import TableCell from '../../../technical/common/components/table/table-cell';
 
 const useColumnsDef = (toggleSort: (column: keyof Transaction) => void) => {
   return useMemo(

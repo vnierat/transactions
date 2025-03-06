@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
 import { format } from 'date-fns';
 import { Transaction } from '../types';
-import { DATE_FORMAT } from '../../config/consts';
+import { DATE_FORMAT } from '../../../config/consts';
 import useSortedTransactions from './use-sorted-transaction';
 
 const mockTransactions: Transaction[] = [
