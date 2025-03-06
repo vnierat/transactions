@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "timestamp": 1625078400,
+  "base": "EUR",
+  "date": "2024-03-05",
+  "rates": {
+    "USD": 1.085,
+    "GBP": 0.84,
+    "JPY": 130.45
+  }
+}
