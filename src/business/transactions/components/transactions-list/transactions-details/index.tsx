@@ -27,7 +27,7 @@ const TransactionsDetails = ({
     return tx ? (
       <div className="flex flex-col text-gray-500 text-center">
         <h2 className="font-bold text-lg">Transaction sélectionnée :</h2>
-        <div className="text-right py-4 space-y-2">
+        <div className="text-left py-4 space-y-2 bg-indigo-100 p-4 mt-4 rounded-lg">
           <p className="font-bold">{tx.counterpartyName}</p>
           <CurrencyDisplay amounts={tx.amounts} />
           <p className="font-bold">{tx.createdAt}</p>

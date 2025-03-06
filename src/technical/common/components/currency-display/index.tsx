@@ -24,27 +24,29 @@ const CurrencyDisplay = ({
     <div className="flex flex-col items-end">
       {hasNegativeValue
         ? Object.entries(amounts).map(([key, value]) => (
-            <div key={key} className="w-full flex justify-end">
+            <div key={key} className="w-full flex">
               {key === defaultCurrency ? (
-                <div className="flex space-x-2 items-center text-right">
+                <div className="flex space-x-2 items-center">
                   <div className="font-bold">
                     {separateNegativeSign(value)} {key}
                   </div>
                   <div className="text-red-300">▼</div>
                 </div>
               ) : (
-                <div className="text-gray-400 text-sm text-right">
+                <div className="text-gray-400 text-sm ml-4">
                   {separateNegativeSign(value)} {key}
                 </div>
               )}
             </div>
           ))
         : amounts.EUR && (
-            <div className="flex space-x-2 items-center justify-end text-right">
-              <div className="font-bold">
-                {separateNegativeSign(amounts.EUR)} {defaultCurrency}
+            <div className="w-full flex">
+              <div className="flex space-x-2 items-center">
+                <div className="font-bold">
+                  {separateNegativeSign(amounts.EUR)} {defaultCurrency}
+                </div>
+                <div className="text-blue-300">▲</div>
               </div>
-              <div className="text-blue-300">▲</div>
             </div>
           )}
     </div>
