@@ -38,14 +38,12 @@ const DataTable = <T extends { id: string }>({
     const newSelectedRows = new Set(selectedRows);
 
     if (event.shiftKey) {
-      // Toggle de la sélection sans affecter les autres
       if (newSelectedRows.has(rowId)) {
         newSelectedRows.delete(rowId);
       } else {
         newSelectedRows.add(rowId);
       }
     } else {
-      // Sélection normale : tout réinitialiser et sélectionner uniquement la ligne cliquée
       newSelectedRows.clear();
       newSelectedRows.add(rowId);
     }

@@ -31,7 +31,10 @@ const TransactionsDetails = ({
           <p className="font-bold">{tx.counterpartyName}</p>
           <CurrencyDisplay amounts={tx.amounts} />
           <p className="font-bold">{tx.createdAt}</p>
-          <p className="font-bold">Type: {tx.operationType}</p>
+          <p className="font-bold">
+            Payment type:{' '}
+            <span className="font-normal">{tx.operationType}</span>
+          </p>
         </div>
       </div>
     ) : null;
@@ -45,7 +48,7 @@ const TransactionsDetails = ({
       <hr />
       <div>
         {Array.from(selectedTransactions).map((txId) => (
-          <span key={txId}>{txId},</span>
+          <span key={txId}>{txId}, </span>
         ))}
       </div>
     </div>

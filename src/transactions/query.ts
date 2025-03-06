@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import transformrawTransactionsToTransactions from './api/transform';
 import { getCurrenciesRates, getTransactions } from './api';
+import transformrawTransactionsToTransactions from './api/transform';
 
 const transactionsKeys = {
   allTransactions: ['transactions'] as const,

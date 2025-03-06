@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { CurrenciesRates, RawTransaction, Transaction } from '../types';
 import { DATE_FORMAT } from '../../config/consts';
 
-const convertCurrencies = (
+export const convertCurrencies = (
   amount: string,
   defaultCurrency: string,
   rate?: number

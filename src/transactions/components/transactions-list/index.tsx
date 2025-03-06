@@ -1,11 +1,11 @@
 import { useState, useCallback } from 'react';
 import { LoaderCircle } from 'lucide-react';
 import useColumnsDef from '../../utils/transactions-columns-def';
-import useSortedData from '../../../technical/common/utils/hooks/use-sorted-data';
 import { Transaction } from '../../types';
 import { useGetTransactions } from '../../query';
 import DataTable from '../../../technical/common/components/table';
 import TransactionsDetails from './transactions-details';
+import useSortedTransactions from '../../utils/use-sorted-transaction';
 
 const TransactionsList = () => {
   const { data: transactions, error, isLoading } = useGetTransactions();
@@ -36,7 +36,11 @@ const TransactionsList = () => {
     [sortColumn]
   );
 
-  const sortedData = useSortedData(transactions ?? [], sortColumn, sortOrder);
+  const sortedData = useSortedTransactions(
+    transactions ?? [],
+    sortColumn,
+    sortOrder
+  );
   const columns = useColumnsDef(toggleSort);
 
   const handleSelectionChange = (selected: Set<string>) => {

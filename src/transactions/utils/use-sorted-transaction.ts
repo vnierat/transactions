@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
 import { compareAsc, compareDesc, parse } from 'date-fns';
-import { Transaction } from '../../../../transactions/types';
-import { DATE_FORMAT } from '../../../../config/consts';
-import isCurrenciesRates from '../../../../transactions/utils/is-currencies-rates';
+import { Transaction } from '../types';
+import { DATE_FORMAT } from '../../config/consts';
+import isCurrenciesRates from './is-currencies-rates';
 
-const useSortedData = (
+const useSortedTransactions = (
   data: Transaction[],
   sortColumn: keyof Transaction,
   sortOrder: 'asc' | 'desc'
@@ -56,4 +56,4 @@ const useSortedData = (
   }, [data, sortColumn, sortOrder]);
 };
 
-export default useSortedData;
+export default useSortedTransactions;
