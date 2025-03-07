@@ -62,8 +62,8 @@ const TransactionsList = () => {
     );
 
   return (
-    <div className="flex w-full">
-      <div className="bg-gray-50 py-10 px-30 w-3/4">
+    <div className="flex w-full h-screen">
+      <div className="bg-gray-50 py-10 px-30 w-4/5 overflow-y-auto">
         <DataTable
           data={sortedData}
           sortColumn={sortColumn}
@@ -73,7 +73,7 @@ const TransactionsList = () => {
           onSelect={handleSelectionChange}
         />
       </div>
-      <div className="w-1/4 h-screen fixed right-0 top-0 flex items-center justify-center bg-white">
+      <div className="w-1/5 h-screen bg-white flex flex-col fixed right-0 top-0">
         <TransactionsDetails
           transactions={transactions}
           selectedTransactions={selectedTransactions}

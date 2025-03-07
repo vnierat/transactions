@@ -33,15 +33,13 @@ const useSortedTransactions = (
       }
 
       if (isCurrenciesRates(aValue) && isCurrenciesRates(bValue)) {
-        if (typeof currencyA === 'string' && typeof currencyB === 'string') {
-          const aAmount = aValue[currencyA];
-          const bAmount = bValue[currencyB];
+        const aAmount = aValue[currencyA];
+        const bAmount = bValue[currencyB];
 
-          if (typeof aAmount === 'string' && typeof bAmount === 'string') {
-            return sortOrder === 'asc'
-              ? parseFloat(aAmount) - parseFloat(bAmount)
-              : parseFloat(bAmount) - parseFloat(aAmount);
-          }
+        if (typeof aAmount === 'string' && typeof bAmount === 'string') {
+          return sortOrder === 'asc'
+            ? parseFloat(aAmount) - parseFloat(bAmount)
+            : parseFloat(bAmount) - parseFloat(aAmount);
         }
       }
 

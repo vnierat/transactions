@@ -52,8 +52,8 @@ const DataTable = <T extends { id: string }>({
   };
 
   return (
-    <div className="overflow-x-auto rounded">
-      <table className="min-w-full shadow-md rounded-lg">
+    <div className="overflow-x-auto">
+      <table className="min-w-full shadow-md text-sm">
         <thead className="border-b-2 border-gray-400">
           <tr>
             {columns.map((col) => (

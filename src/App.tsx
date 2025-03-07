@@ -17,7 +17,7 @@ export const App = () => {
             cta={
               <button
                 type="button"
-                className="cursor-pointer uppercase border border-cyan-200 rounded-lg px-4 py-2 mx-4 text-cyan-200"
+                className="cursor-pointer uppercase border border-cyan-100 rounded-lg px-4 py-2 mx-4 text-cyan-100 hover:bg-gray-700"
               >
                 upgrade account
               </button>

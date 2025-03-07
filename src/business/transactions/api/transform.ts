@@ -2,34 +2,28 @@ import { format } from 'date-fns';
 import { CurrenciesRates, RawTransaction, Transaction } from '../types';
 import { DATE_FORMAT } from '../../../config/consts';
 
+const formatCurrency = (amount: number): string =>
+  new Intl.NumberFormat(navigator.language, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(amount);
+
 export const convertCurrencies = (
   amount: string,
   defaultCurrency: string,
   rate?: number
-): {
-  [key: string]: string;
-} => {
+): { [key: string]: string } => {
   const amountToNumber = parseFloat(amount);
+  const formattedAmount = formatCurrency(amountToNumber);
 
-  const formattedAmount = new Intl.NumberFormat(navigator.language, {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(amountToNumber);
-
-  if (!rate) {
-    return {
-      [defaultCurrency]: formattedAmount,
-    };
+  // GBP conversion is only displayed for negative values
+  if (!rate || !amount.startsWith('-')) {
+    return { [defaultCurrency]: formattedAmount };
   }
-
-  const convertedNumber = amountToNumber * rate;
 
   return {
     [defaultCurrency]: formattedAmount,
-    GBP: new Intl.NumberFormat(navigator.language, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(convertedNumber),
+    GBP: formatCurrency(amountToNumber * rate),
   };
 };
 
