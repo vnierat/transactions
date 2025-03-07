@@ -11,7 +11,7 @@ export const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <div className="flex h-screen">
+        <div className="flex h-screen relative">
           <Sidebar
             sidebarItems={sidebarItems}
             cta={

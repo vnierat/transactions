@@ -14,7 +14,7 @@ const TransactionsDetails = ({
 
   if (selectedCount === 0) {
     return (
-      <div className="my-auto px-8">
+      <div className="my-auto px-6">
         <p className="text-gray-500 text-center">
           Click on one or several transactions to see details
         </p>
@@ -27,7 +27,7 @@ const TransactionsDetails = ({
     const tx = transactions?.find((t) => t.id === txId);
 
     return tx ? (
-      <div className="flex flex-col text-gray-500 text-center my-auto px-8">
+      <div className="flex flex-col text-gray-500 text-center my-auto px-6">
         <h2 className="font-bold text-lg">Transaction sélectionnée :</h2>
         <div className="text-left py-4 space-y-2 bg-indigo-100 p-4 mt-4 rounded-lg">
           <p className="font-bold">{tx.counterpartyName}</p>

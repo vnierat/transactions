@@ -9,7 +9,7 @@ interface SideBarProps {
 }
 
 const Sidebar = ({ sidebarItems, cta }: SideBarProps) => (
-  <div className="w-64 h-screen bg-gray-600 text-white">
+  <div className="w-64 h-screen bg-gray-600 text-white left-0 top-0">
     <div className="h-20 bg-gray-700 flex items-center">
       <h1 className="text-xl font-bold ml-8">FINPAL</h1>
     </div>

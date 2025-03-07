@@ -73,7 +73,7 @@ const TransactionsList = () => {
           onSelect={handleSelectionChange}
         />
       </div>
-      <div className="w-1/5 h-screen bg-white flex flex-col fixed right-0 top-0">
+      <div className="w-1/5 bg-white flex flex-col">
         <TransactionsDetails
           transactions={transactions}
           selectedTransactions={selectedTransactions}
